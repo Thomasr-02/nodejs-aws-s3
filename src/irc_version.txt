@@ -1,0 +1,38 @@
+IRC Version
+
+Introduction
+This document proposes a standardized versioning scheme for Node.js projects, ensuring consistency and clarity in version numbers. The proposed scheme is designed to accommodate semantic versioning with additional support for distinguishing between stable and edge releases.
+
+Versioning Format
+Node.js project versions shall adhere to the following format: x.x.x[-suffix]
+
+x.x.x: The major, minor, and patch version numbers follow the semantic versioning format.
+
+Major Version (x): Represents significant changes that may introduce breaking changes or major feature enhancements.
+Minor Version (x): Signifies backward-compatible functionality additions or improvements.
+Patch Version (x): Indicates bug fixes or minor updates that do not introduce new features.
+[-suffix] (optional): A hyphen followed by a suffix, which can be either "stable" or "edge" to denote the stability of the release.
+
+Stable: Represents a well-tested and production-ready release.
+Edge: Signifies a cutting-edge or pre-release version that may contain experimental features or be under active development.
+Semantic Versioning
+The major, minor, and patch version numbers follow the semantic versioning principles defined by the SemVer specification (https://semver.org). Semantic versioning provides a clear and concise way to communicate the impact and compatibility of changes in a project.
+
+Stability Suffix
+The stability suffix ("-stable" or "-edge") can be added after the patch version number to indicate the stability level of the release. This addition aims to provide users with an understanding of the release's maturity and risk level.
+
+Stable: Versions without the stability suffix ("-stable") indicate a stable and production-ready release. These versions are well-tested, contain minimal known issues, and are recommended for use in production environments.
+
+Edge: Versions with the stability suffix ("-edge") denote pre-release or cutting-edge versions. These versions may contain experimental features, bug fixes, or performance improvements. While they may be suitable for testing and development purposes, they are not recommended for production environments.
+
+Compatibility and Upgrades
+When transitioning from one version to another, compatibility and upgrade considerations should be taken into account:
+
+Major Version: Incrementing the major version indicates potential breaking changes and may require modifications to existing code or dependencies. A careful review and testing of the project are advised before upgrading.
+
+Minor Version: Incrementing the minor version signifies backward-compatible functionality additions or improvements. Upgrading to a higher minor version is generally safe and should not introduce breaking changes.
+
+Patch Version: Incrementing the patch version indicates bug fixes or minor updates that do not introduce new features. Upgrading to a higher patch version is generally safe and compatible with existing codebases.
+
+Conclusion
+The proposed versioning scheme for Node.js projects, based on semantic versioning with stability suffixes, provides a standardized approach to version management. By following this scheme, developers can communicate the impact, stability, and compatibility of releases effectively. This approach aims to enhance collaboration, simplify dependency management, and facilitate the adoption of Node.js projects across different environments.
