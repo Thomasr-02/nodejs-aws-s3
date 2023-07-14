@@ -1,0 +1,28 @@
+Maximum File Size Limit for Amazon S3 Storage
+
+Introduction
+This document proposes a maximum file size limit for storing files in Amazon S3 (Simple Storage Service). The proposed limit is set at 1MB to ensure optimal storage management and to accommodate the storage requirements of multiple projects with large file sizes.
+
+File Size Limit
+The maximum file size allowed for storage in Amazon S3 shall be set at 1MB. Any file exceeding this limit will be considered oversized and not eligible for storage in S3.
+
+Rationale
+Setting a file size limit serves several purposes:
+
+Storage Efficiency: By imposing a maximum file size, storage resources can be allocated more effectively, preventing excessive consumption by individual large files. This ensures that the available storage capacity can be shared efficiently among multiple projects.
+
+Performance Optimization: Limiting file sizes helps maintain optimal performance for data transfer and retrieval operations within the S3 infrastructure. Smaller files generally result in faster upload and download speeds, benefiting both the storage provider and the end-users.
+
+Compatibility: Many applications and systems have limitations when working with very large files. By enforcing a reasonable file size limit, compatibility is enhanced across various tools, libraries, and platforms that interact with the S3 storage.
+
+Implementation Considerations
+The file size limit can be enforced through a combination of client-side validation and server-side checks within the S3 service. When uploading files to S3, clients should verify the file size before initiating the upload process. On the server-side, S3 can be configured to reject files exceeding the specified limit, returning an appropriate error message to the client.
+
+Impact on Existing Files
+To ensure compatibility with the new file size limit, existing files in S3 that exceed 1MB should be reviewed and appropriately resized or divided into smaller files, if feasible. This process can be executed gradually over time to minimize disruptions to ongoing projects.
+
+Future Considerations
+As storage requirements evolve, there may be a need to revisit and adjust the file size limit in the future. Regular assessments of storage usage patterns, project needs, and advancements in storage technologies should inform any potential changes to the maximum file size allowed in S3.
+
+Conclusion
+By establishing a maximum file size limit of 1MB for storage in Amazon S3, this RFC aims to promote efficient storage utilization, enhance performance, and ensure compatibility across multiple projects. Implementing this limit will facilitate effective management of storage resources and promote optimal interactions with the S3 storage service.
