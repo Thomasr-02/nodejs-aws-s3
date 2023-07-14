@@ -1,4 +1,4 @@
-IRC Version
+RFC Versioning
 
 Introduction
 This document proposes a standardized versioning scheme for Node.js projects, ensuring consistency and clarity in version numbers. The proposed scheme is designed to accommodate semantic versioning with additional support for distinguishing between stable and edge releases.
